@@ -1037,6 +1037,7 @@ function Save(source)
     end)
     assert(GetResourceState('qb-inventory') ~= 'started', 'qb-inventory is not compatible with qbx_core. use ox_inventory instead')
     lib.print.verbose(('%s PLAYER SAVED!'):format(playerData.name))
+    exports['qs-inventory']:SaveInventory(source)
 end
 
 exports('Save', Save)
